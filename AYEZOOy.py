@@ -1,32 +1,5 @@
-# Decompile by AYEZOO (Tools By Kapten-Kaizo)
-# Time Succes decompile : 2022-05-22 23:34:12.924217
-W = '\033[97;1m'
-R = '\033[91;1m'
-G = '\033[92;1m'
-Y = '\033[93;1m'
-B = '\033[94;1m'
-P = '\033[95;1m'
-C = '\033[96;1m'
-N = '\x1b[0m'
-		exit()
-	clear()
-	print(logo)
-	pil = input('\n [+] Enter ID Target : ')
-	try:
-		koh2 = requests.get('https://graph.facebook.com/v2.0/'+pil+'?fields=friends.limit(5000)&access_token='+tokenku[0]).json()
-		for pi in koh2['friends']['data']:
-			id.append(pi['id']+'|'+pi['name'])
-		print(' [] Total : '+str(len(id)))
-		setting()
-	except requests.exceptions.ConnectionError:
-		print (' [#] Connection Time Out')
-		exit()
-	except (KeyError,IOError):
-		print(' [!] Not public Or Token Expire')
-		exit()
-def File():
-			clear()
-			print(logo)
+# 
+	
 			try:
 				fileX = input ('\n [+] Enter file path : ') 
 				for line in open(fileX, 'r').readlines():

